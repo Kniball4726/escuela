@@ -13,7 +13,7 @@ public class Persona {
 
     }
 
-    public String getNombre(){
+    protected String getNombre(){
         return nombre;
     }
 

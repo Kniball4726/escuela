@@ -40,11 +40,7 @@ public class Escuela {
                 System.out.println("Alumnos cargados");
                 for (Alumno alumno:listaAlumno){
                     System.out.println("-------------------");
-                    System.out.println("Nombre: "+alumno.getNombre());
-                    System.out.println("DNI: "+alumno.getDni());
-                    System.out.println("Nota 1: "+alumno.getNota1());
-                    System.out.println("Nota 2: "+alumno.getNota2());
-                    System.out.println("Nota 2: "+alumno.getNota3());
+                    alumno.mostrarInformacion();
                 }
 
 
@@ -59,9 +55,7 @@ public class Escuela {
 
                 if (encontrado != null) {
                     System.out.println();
-                    System.out.println("Nombre: "+encontrado.getNombre());
-                    System.out.println("DNI: "+encontrado.getDni());
-                    System.out.println("Notas:\n\tnota 1: "+encontrado.getNota1()+"\n\tnota 2: "+encontrado.getNota2()+"\n\tnota 3: "+encontrado.getNota3());
+                    encontrado.mostrarInformacion();
                 } else {
                     // No encontramos a nadie con ese DNI
                     System.out.println("Error: No se encontró ningún estudiante con el DNI " + dni);
@@ -82,15 +76,15 @@ public class Escuela {
                     System.out.println("Estudiante encontrado: " + encontrado.getNombre());
             
                     System.out.print("Ingrese Nota 1: ");
-                    int n1 = teclado.nextInt();
+                    double n1 = teclado.nextDouble();
                     encontrado.setNota1(n1);;
 
                     System.out.print("Ingrese Nota 2: ");
-                    int n2 = teclado.nextInt();
+                    double n2 = teclado.nextDouble();
                     encontrado.setNota2(n2);
 
                     System.out.print("Ingrese Nota 3: ");
-                    int n3 = teclado.nextInt();
+                    double n3 = teclado.nextDouble();
                     encontrado.setNota3(n3);
 
                     System.out.println("\n¡Notas cargadas con éxito!");
