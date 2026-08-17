@@ -8,11 +8,12 @@ public class Alumno extends Persona {
     private int nota3;
 
     public Alumno(String nombre, String dni){
-        super();
+        super(nombre, dni);
+
     }
 
     public Alumno(String nombre,String dni, int nota1, int nota2, int nota3){
-        super();
+        super(nombre, dni);
         this.nota1= nota1;
         this.nota2=nota2;
         this.nota3=nota3;
@@ -42,6 +43,11 @@ public class Alumno extends Persona {
 
     public int getNota3(){
         return nota3;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Estudiante: " + nombre + " (DNI: " + dni + ")");
+        System.out.println("Notas: [" + nota1 + ", " + nota2 + ", " + nota3 + "]");
     }
 
     @Override

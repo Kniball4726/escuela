@@ -6,11 +6,11 @@ public class Profesor extends Persona {
     private String materia;
 
     public Profesor(String nombre, String dni){
-        super();
+        super(nombre, dni);
     }
 
     public Profesor(String nombre, String dni, String materia){
-        super();
+        super(nombre, dni);
         this.materia = materia;
     }
 
@@ -20,6 +20,15 @@ public class Profesor extends Persona {
 
     public String getMateria(){
         return materia;
+    }
+    @Override
+    public String getDni(){
+        return dni;
+    }
+
+    @Override
+    public void setDni(String dni){
+        this.dni = dni;
     }
 
     @Override
