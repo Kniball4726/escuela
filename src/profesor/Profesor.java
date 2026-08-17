@@ -1,38 +1,17 @@
 package profesor;
 
-public class Profesor {
-    private String nombre;
-    private String dni;
+import persona.Persona;
+
+public class Profesor extends Persona {
     private String materia;
 
-    public Profesor(){};
-
-    public Profesor(String nombre,String dni){
-        this.nombre=nombre;
-        this.dni=dni;
-
+    public Profesor(String nombre, String dni){
+        super();
     }
 
-    public Profesor(String nombre,String dni,String materia){
-        this.nombre = nombre;
-        this.dni=dni;
-        this.materia=materia;
-    }
-
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-
-    public String getNombre(){
-        return nombre;
-    }
-
-    public void setDni(String dni){
-        this.dni = dni;
-    }
-
-    public String getDni(){
-        return dni;
+    public Profesor(String nombre, String dni, String materia){
+        super();
+        this.materia = materia;
     }
 
     public void setMateria(String materia){
@@ -43,5 +22,14 @@ public class Profesor {
         return materia;
     }
 
+    @Override
+    public String getNombre(){
+        return nombre;
+    }
+
+    @Override
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }
 
 }
